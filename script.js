@@ -119,5 +119,6 @@ nextSlideBtn.addEventListener("click", nextSlide);
 document.addEventListener("keydown", function (e) {
   if (e.key === "ArrowRight") {
     nextSlide();
+    console.log("slidede");
   }
 });
