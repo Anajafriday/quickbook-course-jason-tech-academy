@@ -1,0 +1,23 @@
+{
+  "name": "jasontech-academy-quickbook-course",
+  "version": "1.0.0",
+  "description": "Embark on a one (1) month transformative journey with our QuickBooks Accounting Software Certificate Course",
+  "main": "script.js",
+  "scripts": {
+    "start": "start parcel index.htm",
+    "build": "build parcel index.html"
+  },
+  "keywords": [
+    "quick book",
+    "accounting",
+    "book keeping",
+    "learning",
+    "make",
+    "money",
+    "online",
+    "quick book course",
+    "elearning"
+  ],
+  "author": "FRIDAY ANAJA",
+  "license": "ISC"
+}
