@@ -23,12 +23,13 @@
       crossorigin="anonymous"
       defer
     ></script>
+    <link rel="shortcut icon" href="img/js-tech-logo.jpg" type="image/x-icon" />
     <link rel="stylesheet" href="style.css" />
     <script src="script.js" defer></script>
   </head>
   <body>
+    <div class="overlay hide"></div>
     <header class="header">
-      <div class="contact-info">+234 9091738605</div>
       <div class="nav-container">
         <div class="logo">
           <a href="index.html">
@@ -40,18 +41,25 @@
         </div>
         <nav class="nav nav-el">
           <ul class="nav-list">
-            <li class="list"><a href="#home" class="list-link">Home</a></li>
             <li class="list">
-              <a href="#about-section" class="list-link">about</a>
+              <a href="#home" class="list-link head-link">Home</a>
             </li>
             <li class="list">
-              <a href="#pricing" class="list-link">pricing</a>
+              <a href="#about-section" class="list-link head-link">about</a>
             </li>
             <li class="list">
-              <a href="#testimonial" class="list-link">testimonial</a>
+              <a href="#pricing" class="list-link head-link">pricing</a>
             </li>
             <li class="list">
-              <a href="#enroll" class="list-link enroll-link">enroll</a>
+              <a href="#testimonial" class="list-link head-link">testimonial</a>
+            </li>
+            <li class="list">
+              <a href="#enroll" class="list-link head-link enroll-link"
+                >enroll</a
+              >
+            </li>
+            <li class="list">
+              <a href="#contact" class="list-link head-link">contact</a>
             </li>
           </ul>
         </nav>
@@ -65,7 +73,7 @@
       <section class="hero-section transform section" id="home">
         <h1 class="hero-heading">
           Unlock Financial Mastery with Our QuickBooks Accounting Software
-          certified Course
+          certificate Course
         </h1>
         <div class="cta-btn">
           <a href="#about-section" class="learn-more cta-link">learn more</a>
@@ -77,7 +85,16 @@
             src="vid/stock-footage-trader-works-behind-computer-screens-filled-with-charts-and-data-analysis-and-also-trades-with.webm"
             controls
             autoplay
-          ></video>
+          >
+            <p>
+              Your browser doesn't support HTML video. Here is a
+              <a
+                href="vid/stock-footage-trader-works-behind-computer-screens-filled-with-charts-and-data-analysis-and-also-trades-with.webm"
+                >link to the video</a
+              >
+              instead.
+            </p>
+          </video>
         </div>
       </section>
       <section class="about-section transform section" id="about-section">
@@ -134,9 +151,9 @@
         <div class="grid-row row-1">
           <div>
             <div class="col col-1">
-              <h5 class="col-head">comprehensive learning</h5>
+              <h5 class="col-head">Comprehensive Learning</h5>
               <p class="col-body">
-                this course covers everything from the basics to advanced
+                This course covers everything from the basics to advanced
                 features of QuickBooks. No matter your current level of
                 expertise, you'll gain a deep understanding of the software's
                 capabilities.
@@ -315,15 +332,23 @@
               opportunities and remote job offers locally and internationally.
             </p>
           </div>
+          <div class="col">
+            <h5 class="col-head">Course Duration and Time Commitment</h5>
+            <p class="col-body">
+              Experience comprehensive transformation in just one month.
+              Dedicate a focused effort to the course material and interactive
+              sessions, and witness your accounting software prowess soar.
+            </p>
+          </div>
         </div>
       </section>
       <section class="material-section">
-        <h2 class="big-head">quick view of the software images</h2>
+        <h2 class="big-head">Screenshots</h2>
         <div class="container">
           <div class="grid-row material-row">
             <div class="col material-col">
               <img
-                src="img/quickbooks-image.png"
+                src="img/quickbook--original.png"
                 alt="QuickBooks-logo"
                 class="materia-img"
               />
@@ -395,8 +420,20 @@
             Gain access to this transformative course for a limited time offer
             of just $55, with a convenient one-time payment. Don't miss out on
             this exceptional value to elevate your financial skills.
+            <strong>
+              Naira , Dollar and Cedis payment option is available
+            </strong>
           </p>
-          <p class="price">$55</p>
+          <div class="cta-btn">
+            <a
+              class="price"
+              href="https://paystack.com/pay/pdg43827rq"
+              class="cta-link enroll-btn"
+              target="_blank"
+            >
+              $55
+            </a>
+          </div>
         </div>
       </section>
       <section class="testimonial-section transform section" id="testimonial">
@@ -433,10 +470,7 @@
               </p>
               <div class="row testimony-col-row">
                 <div class="col img-col">
-                  <img
-                    src="img/jason_tech_academy_logo-png.png"
-                    alt="second testimonial"
-                  />
+                  <img src="img/allysa grayson.jpeg" alt="second testimonial" />
                 </div>
                 <div class="col">
                   <h3 class="name">allysa grayson</h3>
@@ -504,6 +538,9 @@
             of finance and accounting. Join our QuickBooks Accounting Software
             Course and take the first step towards financial mastery. Enroll now
             and unlock a world of financial possibilities!
+            <strong>
+              Naira , Dollar and Cedis payment option is available
+            </strong>
           </p>
           <div class="note">
             <strong>NOTE:</strong>
@@ -522,45 +559,37 @@
           </div>
         </div>
       </section>
-      <section class="rand-section transform section">
-        <h2 class="big-head">nothing to be afraid of</h2>
-        <div class="row row-1">
-          <div class="col col-1">
-            <h5 class="col-head">Course Duration and Time Commitment</h5>
-            <p class="col-body">
-              Experience comprehensive transformation in just one month.
-              Dedicate a focused effort to the course material and interactive
-              sessions, and witness your accounting software prowess soar.
-            </p>
-          </div>
-          <div class="col col-1">
-            <h5 class="col-head">
-              Money-Back Guarantee or Satisfaction Promise
-            </h5>
-            <p class="col-body">
-              this course covers everything from the basics to advanced features
-              of QuickBooks. No matter your current level of expertise, you'll
-              gain a deep understanding of the software's capabilities.
-            </p>
-          </div>
+      <section class="rand-section transform section guarantee-section">
+        <div>
+          <h5 class="col-head">Money-Back Guarantee or Satisfaction Promise</h5>
+          <p class="col-body">
+            Your satisfaction is our priority. We are confident in the value our
+            course provides. If, within the first 7 days, you find that the
+            course doesn't meet your expectations, we offer a hassle-free
+            money-back guarantee. Your journey to financial mastery is risk-free
+            with our commitment to your satisfaction.
+          </p>
         </div>
       </section>
 
-      <section class="cta-section transform section">
+      <section class="cta-section transform section" id="contact">
         <div class="cta-container">
           <h6 class="cta-body">
             Invest in your financial future today with our QuickBooks Accounting
             Software Course. For any inquiries, Email:
-            <strong class="Email">
-              <a href="https://jasontechacademy@gmail.com"
-                >jasontechacademy@gmail.com</a
-              ></strong
-            >
+            <strong class="Email">jasontechacademy@gmail.com</strong>
             or feel free to call us on
-            <strong class="highlight"> Tel: +234 9091738605</strong>
+            <strong class="highlight"> +1 8505469542 (voice mail only)</strong>
+            or message us on
+            <a
+              href="https://wa.link/mq89qj"
+              target="_blank"
+              class="cta-body highlight"
+              >whatsapp Link</a
+            >
           </h6>
           <p class="cta-body">
-            remember, financial excellence begins with the right education.
+            Remember, financial excellence begins with the right education.
             Enroll now and embrace the power of QuickBooks!
           </p>
         </div>
@@ -630,37 +659,31 @@
                 ><i class="fa-brands fa-linkedin"></i
               ></a>
             </div>
-            <div class="col media-icon">
-              <a
-                href="https://jesseanaja@gmail.com"
-                class="media-link"
-                target="_blank"
-                ><i class="fa-solid fa-envelope"></i
-              ></a>
-            </div>
           </div>
         </div>
       </section>
       <section class="cta-section transform section">
         <div class="cta-container">
-          <h1 class="bd-head">Enroll later</h1>
+          <h1 class="bd-head">Enroll later ?</h1>
 
           <p class="cta-body">
-            you can drop your name and your contact info on our telegram channel
-            by clicking on the join waiting list button
+            Join the Waitlist Now! Be at the forefront of our exclusive updates
+            and secure your spot for early enrollment benefits. Don't miss out
+            on this opportunity to gain an edge. Enroll later or take action now
           </p>
           <div class="cta-btn">
             <a
               href="https://t.me/+7WsvbTXGDeoxNGU0"
               class="cta-link enroll-btn"
               target="_blank"
-              >Join waiting list</a
+            >
+              Waitlist</a
             >
           </div>
         </div>
       </section>
       <section class="question-section transform section">
-        <h2 class="big-head">frequently ask question (FAQS)</h2>
+        <h2 class="big-head">frequently ask questions (FAQS)</h2>
 
         <div class="question-container">
           <div class="question-row">
@@ -734,8 +757,9 @@
                   team?
                 </summary>
                 <p class="answer">
-                  <strong> Sure, contact us via:</strong> Whatsapp: +234
-                  9091738605 Email:
+                  <strong> Sure, contact us via:</strong>
+                  <a href="https://wa.link/mq89qj"> Whatsapp: </a>
+                  Email:
                   <a href="https://jasontechacademy@gmail.com"
                     >jasontechacademy@gmail.com</a
                   >
@@ -755,13 +779,7 @@
             enhancing your financial expertise. Your success is our priority
           </p>
         </div>
-        <a
-          href="https://jasontechacademy@gmail.com"
-          class="cta-body footer-highlight"
-          target="_blank"
-        >
-          jasontechacademy@gmail.com
-        </a>
+        <p class="cta-body footer-highlight">jasontechacademy@gmail.com</p>
         <div class="line"></div>
         <div class="nav-container">
           <div class="logo">
@@ -782,6 +800,9 @@
               <li class="list">
                 <a href="#pricing" class="list-link">pricing</a>
               </li>
+              <li class="list">
+                <a href="#contact" class="list-link">contact</a>
+              </li>
             </ul>
           </nav>
         </div>
@@ -791,6 +812,9 @@
             class="media-link"
             target="_blank"
             ><i class="fa-brands fa-linkedin"></i
+          ></a>
+          <a href="https://wa.link/mq89qj" class="media-link" target="_blank"
+            ><i class="fa-brands fa-whatsapp"></i
           ></a>
           <a
             href="https://youtube.com/@JasonTechAcademy?si=dR4ftGQ166N_LPpD"

@@ -7,25 +7,34 @@ const dotsContainer = document.querySelector(".dot--container");
 const nextSlideBtn = document.querySelector(".next-slide-btn");
 const navBtn = document.querySelector(".nav--btn");
 const navContainer = document.querySelector(".nav-el");
+const overlay = document.querySelector(".overlay");
+const navbtns = document.querySelectorAll(".btn-nav ");
 
 const toggleBtn = (openBtn, closeBtn) => {
-  openBtn.classList.toggle("hide");
-  closeBtn.classList.toggle("hide");
+  openBtn?.classList.toggle("hide");
+  closeBtn?.classList.toggle("hide");
 };
 const toggleNav = function (openBtn, closeBtn) {
+  console.log(openBtn, closeBtn);
   navContainer.classList.toggle("open-nav");
   toggleBtn(openBtn, closeBtn);
 };
 
+overlay.addEventListener("click", (e) => {
+  e.currentTarget.classList.add("hide");
+  toggleNav(navbtns[0], navbtns[1]);
+});
 const getNAvBTn = function () {
   navBtn.addEventListener("click", function (e) {
     const openBtn = e.currentTarget.querySelector(".nav--open");
     const closeBtn = e.currentTarget.querySelector(".nav--close");
     if (e.target.classList.contains("nav--open")) {
       toggleNav(openBtn, closeBtn);
+      overlay.classList.remove("hide");
     }
     if (e.target.classList.contains("nav--close")) {
       toggleNav(openBtn, closeBtn);
+      overlay.classList.add("hide");
     }
   });
 };
@@ -53,12 +62,13 @@ learnMoreBtn.addEventListener("click", function (e) {
 navLinks.forEach((links) => {
   links.addEventListener("click", function (e) {
     e.preventDefault();
-    const navbtns = document.querySelectorAll(".btn-nav ");
     if (e.target.classList.contains("list-link")) {
       const id = e.target.getAttribute("href");
       document.querySelector(id).scrollIntoView({ behavior: "smooth" });
+    }
+    if (e.target.classList.contains("head-link")) {
+      toggleNav(navbtns[0], navbtns[1]);
       navContainer.classList.remove("open-nav");
-      toggleBtn(navbtns[0], navbtns[1]);
     }
   });
 });
@@ -88,22 +98,21 @@ const goToSlide = function (slide) {
 };
 // activateDot(1);
 
-goToSlide(1);
 let numSlide = testimonies.length - 1;
-const mediaQuery = window.matchMedia("(max-width:700px)");
-mediaQuery.addEventListener("change", function (e) {
-  if (e.matches) {
-    // document.querySelector(".testimonial-row").classList.remove("row");
-    goToSlide(0);
-    numSlide += 1;
+const mediaQuery = window.matchMedia("(max-width:788px)");
+goToSlide(1);
 
-    testimonies.forEach((slide) => {
-      slide.addEventListener("touchstart", () => {
-        nextSlide();
-      });
+// document.querySelector(".testimonial-row").classList.remove("row");
+if (mediaQuery) {
+  goToSlide(0);
+  numSlide += 1;
+  testimonies.forEach((slide) => {
+    slide.addEventListener("touchstart", () => {
+      nextSlide();
     });
-  }
-});
+  });
+}
+
 let currSlide = 1;
 const nextSlide = function () {
   if (currSlide === numSlide - 1) {

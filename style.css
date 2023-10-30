@@ -24,14 +24,15 @@
 } */
 html {
   font-size: 16px;
-  color-scheme: light dark;
+  color-scheme: dark light;
 }
 body {
-  background-color: var(--neutra-dark);
+  /* background-color: var(--neutra-dark); */
   /* background-color: var(--neutra-light); */
   font-family: var(--font-family);
-  color: var(--neutra-light);
-  /* color: var(--neutra-dark); */
+  /* color: var(--neutra-light); */
+  /* color: var(--neutra-dark);
+  guarantee */
   font-size: 100%;
 }
 
@@ -60,10 +61,20 @@ section {
   align-items: center;
   flex-direction: column;
 }
+.overlay {
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(1rem);
+  top: 0;
+  z-index: 100;
+}
 .logo {
   padding: 0.8rem 0;
   background-color: var(--neutra-light);
-  margin-top: -2rem;
+  /* margin-top: -2rem; */
+  width: 100%;
 }
 .logo img {
   width: 20%;
@@ -106,7 +117,7 @@ section {
 .nav--btn {
   z-index: 888;
   margin-top: -3rem;
-  margin-left: 12rem;
+  margin-left: 14rem;
   float: right;
   font-size: 1.6rem;
   position: relative;
@@ -197,6 +208,12 @@ section {
   margin-left: 1rem;
 }
 
+.guarantee-section {
+  padding: 1rem !important;
+}
+.guarantee-section div {
+  padding: 3rem 0;
+}
 summary,
 .summary-list li::marker {
   font-size: 1.3rem;
@@ -242,9 +259,34 @@ summary,
   line-height: 1.7;
   margin-bottom: 1rem;
 }
+.material-section {
+  overflow-x: hidden;
+}
 .material-row {
-  grid-template-columns: repeat(2, 1fr) !important;
+  width: 300rem !important;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
   gap: 1rem;
+  transition: transform 1s;
+  animation: slide 120s infinite linear;
+  transform-origin: center;
+}
+.material-col {
+  align-items: center;
+}
+.material-col img {
+  width: 120% !important;
+}
+
+/* ANIMATIONS */
+@keyframes slide {
+  from {
+    transform: translate(0);
+  }
+  to {
+    transform: translate(-100%);
+  }
 }
 .cta-section {
   background-color: var(--Primary-color);
@@ -457,7 +499,7 @@ footer .nav-container .logo {
   font-size: 1rem !important;
   padding: 0.5em 1em;
   border-radius: 3.35rem;
-  text-decoration: none;
+  text-align: center !important;
 }
 
 .line {
@@ -496,6 +538,7 @@ footer .nav-container .logo {
   width: 100%;
   margin: 0 auto 2rem auto;
   line-height: 1.6;
+  text-transform: capitalize;
 }
 
 .cta-link {
@@ -510,6 +553,7 @@ footer .nav-container .logo {
   font-weight: 500;
   padding: 0.5rem 3rem;
   border-radius: 0.3rem;
+  text-transform: capitalize;
 }
 .cta-btn {
   margin-top: 2rem;
@@ -534,6 +578,7 @@ footer .nav-container .logo {
   margin-top: -3rem;
   margin-bottom: 1rem;
   line-height: 1.5;
+  text-transform: capitalize;
 }
 .col-body {
   width: 100%;
@@ -544,6 +589,7 @@ footer .nav-container .logo {
   text-align: center;
   font-size: 1.3rem;
   margin: 1rem 0;
+  text-transform: capitalize !important;
 }
 .question-tag {
   font-weight: 600;
@@ -623,7 +669,7 @@ footer .nav-container .logo {
 }
 /* MEDIA  */
 
-@media (min-width: 900px) {
+@media (min-width: 900px), (min-width: 1024px) {
   section {
     padding: 3.5rem;
   }
@@ -684,7 +730,7 @@ footer .nav-container .logo {
     width: 70%;
   }
   .material-row {
-    grid-template-columns: repeat(3, 1fr) !important;
+    display: flex;
   }
   .container {
     width: 80rem;
@@ -729,6 +775,14 @@ footer .nav-container .logo {
   .instructor-img {
     width: 100%;
     margin-right: -8rem;
+  }
+  .guarantee-section {
+    background-color: transparent;
+    padding: 2rem 5rem;
+  }
+  .guarantee-section div {
+    width: 50%;
+    margin: 0 auto;
   }
   /* fonts */
   .testimony-head {
@@ -785,5 +839,8 @@ footer .nav-container .logo {
   }
   .footer-highlight {
     font-size: 2rem !important;
+  }
+  .overlay {
+    display: none;
   }
 }

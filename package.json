@@ -4,7 +4,7 @@
   "description": "Embark on a one (1) month transformative journey with our QuickBooks Accounting Software Certificate Course",
   "main": "script.js",
   "scripts": {
-    "start": "start parcel index.htm",
+    "start": "start parcel index.html",
     "build": "build parcel index.html"
   },
   "keywords": [
@@ -19,5 +19,8 @@
     "elearning"
   ],
   "author": "FRIDAY ANAJA",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "parcel": "^2.10.1"
+  }
 }
