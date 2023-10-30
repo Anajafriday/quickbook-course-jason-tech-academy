@@ -69,6 +69,7 @@ navLinks.forEach((links) => {
     if (e.target.classList.contains("head-link")) {
       toggleNav(navbtns[0], navbtns[1]);
       navContainer.classList.remove("open-nav");
+      overlay.classList.add("hide");
     }
   });
 });
